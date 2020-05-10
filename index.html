@@ -206,34 +206,34 @@ div.b1 {
 <section id="skills">
   <div class="main">
     <div class="w3-bar w3-black">
-  <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+  <button class="w3-bar-item w3-button" onclick="openSkill('Conversational AI')">Conversational AI</button>
+  <button class="w3-bar-item w3-button" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
+  <button class="w3-bar-item w3-button" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
 </div>
 
-<div id="London" class="w3-container city">
-  <h2>London</h2>
-  <p>London is the capital city of England.</p>
+<div id="Conversational AI" class="w3-container skill">
+  <h2>Conversational AI</h2>
+  <p>I created ESTA, EastWest Technical Assistant</p>
 </div>
 
-<div id="Paris" class="w3-container city" style="display:none">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p>
+<div id="Bioinformatics" class="w3-container skill" style="display:none">
+  <h2>Bioinformatics</h2>
+  <p>I went to Philippine Genome Center</p>
 </div>
 
-<div id="Tokyo" class="w3-container city" style="display:none">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Sentiment Analysis" class="w3-container skill" style="display:none">
+  <h2>Sentiment Analysis</h2>
+  <p>Best in Special Problems, Algorithms Category</p>
 </div>
 
 <script>
-function openCity(cityName) {
+function openSkill(skill) {
   var i;
-  var x = document.getElementsByClassName("city");
+  var x = document.getElementsByClassName("skill");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(skill).style.display = "block";
 }
 </script>
 
