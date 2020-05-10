@@ -103,6 +103,29 @@ body {
   padding: 20px;
 }
 
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 /* Fake image, just for this example */
 .fakeimg {
   background-color: #aaa;
@@ -293,9 +316,9 @@ div.b1 {
   <div class="main">
     <h2>Skills</h2>
     <div class="w3-bar w3-transparent">
-  <button class="w3-bar-item w3-button" onclick="openSkill('Conversational AI')">Conversational AI</button>
-  <button class="w3-bar-item w3-button" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
-  <button class="w3-bar-item w3-button" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
+  <button class="w3-bar-item button1" onclick="openSkill('Conversational AI')">Conversational AI</button>
+  <button class="w3-bar-item button1" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
+  <button class="w3-bar-item button2" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
 </div>
 
 <div id="Conversational AI" class="w3-container skill">
