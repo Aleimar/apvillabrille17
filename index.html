@@ -362,12 +362,7 @@ div.b1 {
     <div class = "item1">
       <img id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG" alt="Esta Chatbot" style="width:100%;max-width:300px">
     </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption">Esta responding to a question</div>
-    </div>
+
 
     <script>
     // Get the modal
@@ -378,12 +373,14 @@ div.b1 {
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
 
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
         img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
       }
-
+    }
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -417,6 +414,13 @@ div.b1 {
   <div class="grid-container">
     <div class = "item1">
       <img id="myImg" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
     </div>
 
     <div>
