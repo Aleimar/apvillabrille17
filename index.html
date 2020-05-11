@@ -397,12 +397,6 @@ div.b1 {
       <img id="myImg" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-    </div>
 
     <div>
     <p>Become a bioinformatics intern at Philippine Genome</p>
@@ -441,29 +435,31 @@ function openSkill(skill) {
 </script>
 
 <script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var images = document.getElementById("myImg");
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImg');
+// the image in the modal
 var modalImg = document.getElementById("img01");
+// and the caption in the modal
 var captionText = document.getElementById("caption");
 
+// Go through all of the images with our custom class
 for (var i = 0; i < images.length; i++) {
   var img = images[i];
-    img.onclick = function(){
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    console.log(evt);
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
   }
 }
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-modal.style.display = "none";
+  modal.style.display = "none";
 }
 </script>
 
