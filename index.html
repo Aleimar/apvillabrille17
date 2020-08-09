@@ -20,27 +20,32 @@
   box-sizing: border-box;
 }
 
-#embedded_messenger {
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
   position: fixed;
-  z-index: 1000;
-  bottom: -400px;
-  right: 2rem;
-  height: 434px;
-  transition: 0.5s ease-in-out bottom;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }
-#embedded_messenger.active {
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
   bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
-#embedded_messenger iframe {
-  height: 400px;
-  width: 100%;
-  border: 0;
-}
-#embedded_messenger #message_header {
-  background: #000;
-  padding: 0.5rem 1rem;
-  color: #FFF;
-}
+
+/*chat pop up*/
+
 
 /* Style the body */
 body {
@@ -497,7 +502,28 @@ function openSkill(skill) {
     <!---
     <iframe src='https://webchat.botframework.com/embed/experiment_bot?s=exyUdckj8Rc.TjHge2vnH38F7vSfPSGNnSLtiQKAmO2RKDxt0ia5mJY'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
   -->
+<!-- Copy and Paste Me -->
+<div class="glitch-embed-wrap" id="myForm">
+  <iframe
+    src="https://glitch.com/embed/#!/embed/nightshadebot?path=public/css/embed.css&previewSize=100"
+    title="nightshadebot on Glitch"
+    allow="geolocation; microphone; camera; midi; vr; encrypted-media">
+  </iframe>
 </div>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+</div>
+
 </section>
 
 </body>
