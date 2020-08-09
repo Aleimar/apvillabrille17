@@ -141,6 +141,7 @@ div.b1 {
   width: 50px;
 }
 
+/* Whole Modal Code */
 
 #myImg {
   border-radius: 5px;
@@ -148,24 +149,33 @@ div.b1 {
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+#myImg:hover {
+  opacity: 0.7;
 }
 
-/* Modal Content (image) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
 .modal-content {
   margin: auto;
   display: block;
@@ -173,7 +183,6 @@ div.b1 {
   max-width: 700px;
 }
 
-/* Caption of Modal Image */
 #caption {
   margin: auto;
   display: block;
@@ -185,25 +194,21 @@ div.b1 {
   height: 150px;
 }
 
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
+.modal-content,
+#caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
 }
 
-/* The Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -220,6 +225,14 @@ div.b1 {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Whole Modal Code */
 
 .grid-container {
   display: grid;
@@ -393,7 +406,7 @@ div.b1 {
   <h2>Bioinformatics</h2>
   <div class="grid-container">
     <div class = "item1">
-      <img class="myImages" id="myImg2" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
+      <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
     </div>
     
 
