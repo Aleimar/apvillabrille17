@@ -476,6 +476,16 @@ function openSkill(skill) {
     <iframe src='https://webchat.botframework.com/embed/experiment_bot?s=exyUdckj8Rc.TjHge2vnH38F7vSfPSGNnSLtiQKAmO2RKDxt0ia5mJY'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
   -->
   <!-- Copy and Paste Me -->
+  <div id="embedded_messenger">
+    <header id="message_header" onclick="Botkit.toggle()">Chat</header>
+    <iframe  id="botkit_client" src="//nightshadebot.glitch.me/public/chat.html"></iframe>
+</div>
+<script src="//nightshadebot.glitch.me/public/embed.js"></script>
+<script>
+var options = {};
+Botkit.boot(options);
+</script>
+<link rel="stylesheet" href="//https://nightshadebot.glitch.me/public/embed.css" />
 
 </div>
 </section>
