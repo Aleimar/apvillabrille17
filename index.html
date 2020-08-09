@@ -1,347 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164025356-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164025356-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-164025356-1');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>Aleimar Villabrille</title>
-<link rel="icon" href="https://aleimar.github.io/apvillabrille17/favicon.png">
-<link rel="stylesheet" href="https://aleimar.github.io/apvillabrille17/styleCss.css">
-<meta charset="UTF-8">
+    gtag('config', 'UA-164025356-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Aleimar Villabrille</title>
+  <link rel="icon" href="https://aleimar.github.io/apvillabrille17/favicon.png">
+  <link rel="stylesheet" href="https://aleimar.github.io/apvillabrille17/styleCss.css">
+  <meta charset="UTF-8">
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+    /* Style the body */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
 
-/* Header/logo Title */
-.header {
-  padding: 40px;
-  text-align: center;
-  background-image: url("https://aleimar.github.io/apvillabrille17/background_abstract.PNG");
-  color: white;
-}
+    /* Header/logo Title */
+    .header {
+      padding: 40px;
+      text-align: center;
+      background-image: url("https://aleimar.github.io/apvillabrille17/background_abstract.PNG");
+      color: white;
+    }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #0e2433;
-  text-shadow: 2px 2px 5px #0e2433;
-}
+    /* Increase the font size of the heading */
+    .header h1 {
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #0e2433;
+      text-shadow: 2px 2px 5px #0e2433;
+    }
 
-.header p {
-  font-family: Lato, sans-serif;
-  text-shadow: 2px 2px 5px #45b65e;
-  color: #296d98;
-}
-
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #1D2951;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-.button {
-  background-color: #3f51b5; /* Indigo */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+    .header p {
+      font-family: Lato, sans-serif;
+      text-shadow: 2px 2px 5px #45b65e;
+      color: #296d98;
+    }
 
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+    /* Style the top navigation bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #1D2951;
+    }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
+    /* Style the navigation bar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
 
-div.b1 {
-  width: 50px;
-}
+    /* Right-aligned link */
+    .navbar a.right {
+      float: right;
+    }
 
-/* Whole Modal Code */
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    /* Column container */
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+    }
 
-#myImg:hover {
-  opacity: 0.7;
-}
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      -ms-flex: 30%;
+      /* IE10 */
+      flex: 30%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
 
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
-}
+    /* Main column */
+    .main {
+      -ms-flex: 70%;
+      /* IE10 */
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
+    .button {
+      background-color: #3f51b5;
+      /* Indigo */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+    }
 
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.modal-content,
-#caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0)
-  }
-  to {
-    transform: scale(1)
-  }
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
-/* Whole Modal Code */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-.item1 {
-  grid-row: 1 / 3;
-}
+    .button1 {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
- }
-  div.b1 {
-    width: 0px;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .modal-content {
-    width: 100%;
-  }
-  .grid-container {
-    display: block;
-  }
-}
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  div.b1 {
-    width: 0px;
-  }
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .grid-container {
-    display: block;
-  }
-}
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+    }
+
+    div.b1 {
+      width: 50px;
+    }
+
+    /* Whole Modal Code */
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    .modal-content,
+    #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+    /* Whole Modal Code */
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px;
+      padding: 10px;
+    }
+
+    .item1 {
+      grid-row: 1 / 3;
+    }
 
 
-</style>
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      div.b1 {
+        width: 0px;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .modal-content {
+        width: 100%;
+      }
+
+      .grid-container {
+        display: block;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      div.b1 {
+        width: 0px;
+      }
+
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .grid-container {
+        display: block;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <section id="home">
-<div class="header">
-  <h1>Aleimar Villabrille</h1>
-  <p>Natural Language Processing</p>
-</div>
-</section>
+  <section id="home">
+    <div class="header">
+      <h1>Aleimar Villabrille</h1>
+      <p>Natural Language Processing</p>
+    </div>
+  </section>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact" class="right">Contact</a>
-</div>
-
-<section id="About">
-
-  <div class="side">
-    <h2>About Me</h2>
-    <div class="row">
-      <div>
-     <img src="https://aleimar.github.io/apvillabrille17/LSYI0232.jpg" alt="Avatar" style="display: block; width:200px; border-radius: 45%">
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact" class="right">Contact</a>
   </div>
-  <div class="b1"> </div>
-  <div>
-    <h4><i> Mastering Natural Language Processing </i></h4>
-    <p>I'm currently a chatbot developer in EastWest Banking Corporation. A bot to allow credit card application and provide real-time notifications. </p>
-    <p> An avenue for customer feedback and using NLP to give the best response on their specific concerns or queries. </p>
-    <p> Researching other potential avenues that a chatbot can help to improve both internal and customer-related business operations.</p>
-<div class="b1"> <p> &nbsp</p></div>
-    <h4><i>Personal Information</i></h4>
-    <div class="row">
-      <table>
-        <tr>
-          <td> <b>Origin</b>: </td>
-          <td>&nbsp<td>
-          <td> Samal, Island Garden City of Samal</td>
-        </tr>
-        <tr>
-          <td> <b>Education</b>: </td>
-          <td>&nbsp<td>
-          <td> BS in Computer Science, University of the Philippines Mindanao</td>
-        </tr>
-        <tr>
-          <td> <b> Nickname</b>: </td>
-          <td>&nbsp<td>
-          <td> <i>Al</i></td>
-        </tr>
-      </table>
-      <!---
+
+  <section id="About">
+
+    <div class="side">
+      <h2>About Me</h2>
+      <div class="row">
+        <div>
+          <img src="https://aleimar.github.io/apvillabrille17/LSYI0232.jpg" alt="Avatar"
+            style="display: block; width:200px; border-radius: 45%">
+        </div>
+        <div class="b1"> </div>
+        <div>
+          <h4><i> Mastering Natural Language Processing </i></h4>
+          <p>I'm currently a chatbot developer in EastWest Banking Corporation. A bot to allow credit card application
+            and provide real-time notifications. </p>
+          <p> An avenue for customer feedback and using NLP to give the best response on their specific concerns or
+            queries. </p>
+          <p> Researching other potential avenues that a chatbot can help to improve both internal and customer-related
+            business operations.</p>
+          <div class="b1">
+            <p> &nbsp</p>
+          </div>
+          <h4><i>Personal Information</i></h4>
+          <div class="row">
+            <table>
+              <tr>
+                <td> <b>Origin</b>: </td>
+                <td>&nbsp
+                <td>
+                <td> Samal, Island Garden City of Samal</td>
+              </tr>
+              <tr>
+                <td> <b>Education</b>: </td>
+                <td>&nbsp
+                <td>
+                <td> BS in Computer Science, University of the Philippines Mindanao</td>
+              </tr>
+              <tr>
+                <td> <b> Nickname</b>: </td>
+                <td>&nbsp
+                <td>
+                <td> <i>Al</i></td>
+              </tr>
+            </table>
+            <!---
       <div>
           <p><b> Origin:</b></p>
           <p><b> Education:</b> </p>
@@ -354,161 +378,198 @@ div.b1 {
           <p>Al</p>
         </div>
       -->
-  </div>
-  </div>
-</div>
-</section>
+          </div>
+        </div>
+      </div>
+  </section>
 
-<section id="skills">
-  <div class="main">
-    <h2>Skills</h2>
-    <div class="w3-bar w3-transparent">
-  <button class="w3-bar-item button button1" onclick="openSkill('Conversational AI')">Conversational AI</button>
-  <button class="w3-bar-item button button1" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
-  <button class="w3-bar-item button button1" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
-  <button class="w3-bar-item button button1" onclick="openSkill('Programming')">Programming</button>
-</div>
+  <section id="skills">
+    <div class="main">
+      <h2>Skills</h2>
+      <div class="w3-bar w3-transparent">
+        <button class="w3-bar-item button button1" onclick="openSkill('Conversational AI')">Conversational AI</button>
+        <button class="w3-bar-item button button1" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
+        <button class="w3-bar-item button button1" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
+        <button class="w3-bar-item button button1" onclick="openSkill('Programming')">Programming</button>
+      </div>
 
-<div id="Conversational AI" class="w3-container skill">
-  <h2>Conversational AI</h2>
-  <div class="grid-container">
-    <div class = "item1">
-      <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG" alt="Esta Chatbot" style="width:100%;max-width:300px">
+      <div id="Conversational AI" class="w3-container skill">
+        <h2>Conversational AI</h2>
+        <div class="grid-container">
+          <div class="item1">
+            <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG"
+              alt="Esta Chatbot" style="width:100%;max-width:300px">
+          </div>
+
+          <div class="b1">
+            <p> &nbsp</p>
+          </div>
+          <div>
+            <p>I created ESTA, EastWest Technical Assistant.</p>
+            <p>Esta serves as a digital tool to help customers apply for credit card, check their application status,
+              and submit application requirements.
+              Certain promo codes and referral links could allow ESTA for auto loans application, personal loan and
+              other products by consumer lending division.
+              Esta has two main channels, on Facebook Messenger the most popular communication platform used by
+              Filipinos, and a secure webchat
+              which information and documents are uploaded as the company values information and data privacy of their
+              customers.
+            </p>
+            <p> Esta also integrates LUIS (for natural language processing) and CustomVision (for image detection).
+              Esta can respond to greetings and spontaenous follow up questions made possible by LUIS that I setup.
+              The CustomVision feature allows Esta to distinguish valid government ID from not to avoid customers
+              uploading erroneous requirements.
+            </p>
+            <p> Its a continuous learning on how to improve ESTA on providing customers need.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="Bioinformatics" class="w3-container skill" style="display:none">
+        <h2>Bioinformatics</h2>
+        <div class="grid-container">
+          <div class="item1">
+            <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/molecular.gif"
+              alt="Molecular Simulation" style="width:100%;max-width:300px">
+          </div>
+
+
+          <div>
+            <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
+            <p>Research project focused on Molecular Dynamics Simulation and Modelling of integrins.
+            </p>
+            <p> Supervised by Mr. Albao from the project of Dr. Bascos of Protein Structure and Immunology Laboratory of
+              National Institute of Molecular Biology and Biotechnology.
+            </p>
+            <p> Poster presentation at 2019 International Union of Biochemistry and Molecular Biology and Philippine
+              Society for Biochemistry and Molecular Biology</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Sentiment Analysis" class="w3-container skill" style="display:none">
+        <h2>Sentiment Analysis</h2>
+
+        <div class="grid-container">
+          <div class="item1">
+            <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG"
+              alt="Esta Chatbot" style="width:100%;max-width:300px">
+          </div>
+
+          <div>
+            <p>Best in Special Problems, Algorithms Category</p>
+            <h3> ABSTRACT </h3>
+            <p>
+              Philippines being labelled as the social media capital of the world means that Filipinos spend their time
+              in the internet for recreation and entertainment purposes.
+              Social media is the main avenue of people to share stories and express their sentiments in various topics
+              ranging from politics to media personalities.
+              All these sentiments suggests that there is a huge amount of Filipino sentiment data out there waiting to
+              be converted into valuable information.
+              Current approaches used in natural language processing for Filipino language is the classic machine
+              learning algorithms such as Support Vector Machine and Naïve Bayes which yielded low accuracy or used
+              imbalanced data set for training.
+            </p>
+            <p>
+              In this paper, the researcher explored Convolutional Neural Networks by analyzing sentiments of Filipino
+              Tweets.
+              The network performs binary classification and initially labelled their tweets based on their emoticons.
+              For the architecture to accept tweets, before training, the tweets were converted to vectors using
+              word2vec.
+              The network was trained to 7,741 tweets and tested to 1,936 tweets.
+              The model yielded with accuracy of 74.68% accuracy and was compared to Naïve Bayes that yielded 69.49% by
+              the same dataset.
+              This small margin between the classic machine learning algorithm means that there is a potential in
+              exploring CNN architecture for various natural language processing problems for Filipino languages.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Programming" class="w3-container skill" style="display:none">
+        <h2>Programming Languages</h2>
+        <h4> Proficient</h4>
+        <p> Python </p>
+        <p> C/C++ </p>
+        <p> Java </p>
+        <p> JavaScript (Node JS) </p>
+        <h4> Familiar </h4>
+        <p> R </p>
+        <p> PHP </p>
+        <h4> Database</h4>
+        <p> SQL </p>
+        <p> NoSQL </p>
+      </div>
+
     </div>
-    <!-- The Modal -->
-    <!--
+
+    <!-- MODAL -->
+
     <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
-    -->
 
-    <div class="b1"> <p> &nbsp</p> </div>
-    <div>
-    <p>I created ESTA, EastWest Technical Assistant.</p>
-    <p>Esta serves as a digital tool to help customers apply for credit card, check their application status, and submit application requirements.
-      Certain promo codes and referral links could allow ESTA for auto loans application, personal loan and other products by consumer lending division.
-      Esta has two main channels, on Facebook Messenger the most popular communication platform used by Filipinos, and a secure webchat
-      which information and documents are uploaded as the company values information and data privacy of their customers.
-     </p>
-     <p> Esta also integrates LUIS (for natural language processing) and CustomVision (for image detection).
-       Esta can respond to greetings and spontaenous follow up questions made possible by LUIS that I setup.
-       The CustomVision feature allows Esta to distinguish valid government ID from not to avoid customers uploading erroneous requirements.
-     </p>
-     <p> Its a continuous learning on how to improve ESTA on providing customers need.</p>
-  </div>
-  </div>
-</div>
+    <!-- MODAL -->
 
+    <script>
+      // create references to the modal...
+      var modal = document.getElementById('myModal');
+      // to all images -- note I'm using a class!
+      var images = document.getElementsByClassName('myImages');
+      // the image in the modal
+      var modalImg = document.getElementById("img01");
+      // and the caption in the modal
+      var captionText = document.getElementById("caption");
 
-<div id="Bioinformatics" class="w3-container skill" style="display:none">
-  <h2>Bioinformatics</h2>
-  <div class="grid-container">
-    <div class = "item1">
-      <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
-    </div>
-    
+      // Go through all of the images with our custom class
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function (evt) {
+          console.log(evt);
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+      }
 
-    <div>
-    <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
-    <p>Research project focused on Molecular Dynamics Simulation and Modelling of integrins.
-     </p>
-     <p> Supervised by Mr. Albao from the project of Dr. Bascos of Protein Structure and Immunology Laboratory of National Institute of Molecular Biology and Biotechnology.
-     </p>
-     <p> Poster presentation at 2019 International Union of Biochemistry and Molecular Biology and Philippine Society for Biochemistry and Molecular Biology</p>
-  </div>
-  </div>
-</div>
+      var span = document.getElementsByClassName("close")[0];
 
-<div id="Sentiment Analysis" class="w3-container skill" style="display:none">
-  <h2>Sentiment Analysis</h2>
-  <p>Best in Special Problems, Algorithms Category</p>
-</div>
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
 
-<div id="Programming" class="w3-container skill" style="display:none">
-  <h2>Programming Languages</h2>
-  <h4> Proficient</h4>
-  <p> Python </p>
-  <p> C/C++ </p>
-  <p> Java </p>
-  <p> JavaScript (Node JS) </p>
-  <h4> Familiar </h4>
-  <p> R </p>
-  <p> PHP </p>
-  <h4> Database</h4>
-  <p> SQL </p>
-  <p> NoSQL </p>
-</div>
-
-</div>
-
-<!-- MODAL -->
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<!-- MODAL -->
-
-<script>
-  // create references to the modal...
-var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-var images = document.getElementsByClassName('myImages');
-// the image in the modal
-var modalImg = document.getElementById("img01");
-// and the caption in the modal
-var captionText = document.getElementById("caption");
-
-// Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function(evt) {
-    console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
-}
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-</script>
+    </script>
 
 
-<script>
-function openSkill(skill) {
-  var i;
-  var x = document.getElementsByClassName("skill");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(skill).style.display = "block";
-}
-</script>
+    <script>
+      function openSkill(skill) {
+        var i;
+        var x = document.getElementsByClassName("skill");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(skill).style.display = "block";
+      }
+    </script>
 
-</section>
+  </section>
 
-<section id="contact">
-<div class="footer">
-  <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:apvillabrille@up.edu.ph">apvillabrille@up(dot)edu(dot)ph</a></p>
-    <!---
+  <section id="contact">
+    <div class="footer">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:apvillabrille@up.edu.ph">apvillabrille@up(dot)edu(dot)ph</a></p>
+      <!---
     <iframe src='https://webchat.botframework.com/embed/experiment_bot?s=exyUdckj8Rc.TjHge2vnH38F7vSfPSGNnSLtiQKAmO2RKDxt0ia5mJY'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
   -->
-<!--  
+      <!--  
   <button class="open-button" onclick="openForm()">Chat</button>
 -->
-  <!-- Copy and Paste Me -->
-  <!--  
+      <!-- Copy and Paste Me -->
+      <!--  
 <div class="glitch-embed-wrap" id="myForm">
   <iframe
     src="https://glitch.com/embed/#!/embed/nightshadebot?path=public/css/embed.css&previewSize=100"
@@ -530,7 +591,8 @@ function openSkill(skill) {
 
 </div>
 -->
-</section>
+  </section>
 
 </body>
+
 </html>
