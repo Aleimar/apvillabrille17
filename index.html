@@ -20,33 +20,6 @@
   box-sizing: border-box;
 }
 
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/*chat pop up*/
-
-
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -383,18 +356,50 @@ div.b1 {
   <button class="w3-bar-item button button1" onclick="openSkill('Programming')">Programming</button>
 </div>
 
+<script>
+  // create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
+
 <div id="Conversational AI" class="w3-container skill">
   <h2>Conversational AI</h2>
   <div class="grid-container">
     <div class = "item1">
-      <img id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG" alt="Esta Chatbot" style="width:100%;max-width:300px">
+      <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG" alt="Esta Chatbot" style="width:100%;max-width:300px">
     </div>
     <!-- The Modal -->
+    <!--
     <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">
     <div id="caption"></div>
     </div>
+    -->
 
     <div class="b1"> <p> &nbsp</p> </div>
     <div>
@@ -418,14 +423,9 @@ div.b1 {
   <h2>Bioinformatics</h2>
   <div class="grid-container">
     <div class = "item1">
-      <img id="myImg2" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
+      <img class="myImages" id="myImg2" src="https://aleimar.github.io/apvillabrille17/molecular.gif" alt="Molecular Simulation" style="width:100%;max-width:300px">
     </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-    </div>
+    
 
     <div>
     <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
@@ -459,28 +459,12 @@ div.b1 {
 </div>
 
 </div>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-modal.style.display = "block";
-modalImg.src = this.src;
-captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-modal.style.display = "none";
-}
-</script>
 
 <script>
 function openSkill(skill) {
