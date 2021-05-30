@@ -19,6 +19,84 @@
   <meta charset="UTF-8">
 
   <style>
+    /** NOTES
+    http://animateplus.com/examples/text/
+    http://michalsnik.github.io/aos/
+    https://codepen.io/VincentGarreau/pen/pnlso -- definitely background
+    other ideas -- https://blog.bitsrc.io/11-javascript-animation-libraries-for-2018-9d7ac93a2c59
+    */
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+
     a.social-link {
       margin-top: 1em;
       display: inline-block;
@@ -38,26 +116,42 @@
 
     /* Header/logo Title */
     .header {
+
       padding: 40px;
+      max-width: 50%;
+      transform: translate(50%, -5%);
       text-align: center;
-      background-image: url("https://aleimar.github.io/apvillabrille17/background_abstract.PNG");
       color: white;
+      /* background: rgba(0, 0, 0, 0.4); */
+      font-family: 'Open Sans', sans-serif;
+
     }
 
     /* Increase the font size of the heading */
     .header h1 {
-      font-size: 40px;
-      text-align: center;
+      
+      /* font-size: 40px;
+      
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: #0e2433;
+      color: #fff;
       text-shadow: 2px 2px 5px #0e2433;
+      font-size: 2.25em;
+      font-weight: 700;
+      */
+      text-align: center;
+      letter-spacing: -1px; 
+      font-size: 4vw;
+  text-shadow: 4px 4px 0px #3F7FBF;
+  mix-blend-mode: screen;
+  animation: fadeIn 2.5s linear forwards;
     }
 
     .header p {
-      font-family: Lato, sans-serif;
+
       text-shadow: 2px 2px 5px #45b65e;
-      color: #296d98;
+      color: #fff;
+      font-size: 30px;
     }
 
 
@@ -262,6 +356,42 @@
       grid-row: 1 / 3;
     }
 
+    #particles-js canvas {
+      display: block;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+      transition: opacity .8s ease, transform 1.4s ease
+    }
+
+    /* #particles-js {
+      /* height: 100%; */
+    /* background: #00356B;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      /* background-color: #437993; */
+    /*background-image: url('');*/
+    /* background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      overflow: hidden; */
+
+    /* } */
+
+    #particles-js {
+      background-size: cover;
+      background: #00356B;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: -10;
+      top: 0;
+      left: 0
+    }
+
 
     /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 700px) {
@@ -312,16 +442,83 @@
       .grid-container {
         display: block;
       }
+
+      .text {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        color: #fff;
+        max-width: 90%;
+        padding: 2em 3em;
+        background: rgba(0, 0, 0, 0.4);
+        text-shadow: 0px 0px 2px #131415;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .text h1 {
+        font-size: 2.25em;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+
     }
   </style>
 </head>
 
 <body>
   <section id="home">
-    <div class="header">
-      <h1>Aleimar Villabrille</h1>
-      <p>Natural Language Processing</p>
+    <!-- <div class="header"> -->
+    <!-- <div> -->
+    <div id="particles-js">
+      <script type="text/javascript" src="particles.js"></script>
+      <script type="text/javascript" src="app.js"></script>
     </div>
+    <div>
+
+      <p>&nbsp</p>
+
+    </div>
+
+    <div class="header">
+      <h1>ALEIMAR VILLABRILLE</h1>
+
+      <p>
+        <span class="text-slider-items">
+
+        </span>
+        <strong class="text-slider"></strong>
+      </p>
+    </div>
+    <script src="typed.min.js">
+    </script>
+
+    <!-- Add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <!-- Add this script for successful 
+        implementation of typed.js  -->
+    <script>
+      if ($(".text-slider").length == 1) {
+
+        var typed_strings =
+          $(".text-slider-items").text();
+
+        var typed = new Typed(".text-slider", {
+          strings: ["I am a Developer", "I am an Analyst", "I am a Researcher"],
+          typeSpeed: 50,
+          loop: true,
+          backDelay: 900,
+          backSpeed: 30,
+        });
+      }
+    </script>
+    <div>
+      
+    </div>
+    <!-- </div> -->
   </section>
 
   <div class="navbar">
@@ -656,6 +853,26 @@
 </div>
 -->
   </section>
+
+  <!-- <button class="open-button" onclick="openForm()">Chat</button>
+
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <iframe src="https://powerva.microsoft.com/webchat/bots/6d76ed28-5412-4c82-b4c5-f210178e9514" frameborder="0"
+        style="width: 100%; height: 100%;"></iframe>
+    </form>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script> -->
+
 
 </body>
 
