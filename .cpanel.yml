@@ -2,4 +2,36 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/obfuzbhr/public_html/
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R node_modules/particles.js $DEPLOYPATH
+    - /bin/cp .DS_Store $DEPLOYPATH
+    - /bin/cp LSYI0232.jpg $DEPLOYPATH
+    - /bin/cp README.md $DEPLOYPATH
+    - /bin/cp VILLABRILLE_RESUME.pdf $DEPLOYPATH
+    - /bin/cp animationFile.js $DEPLOYPATH
+    - /bin/cp app.js $DEPLOYPATH
+    - /bin/cp background.png $DEPLOYPATH
+    - /bin/cp background_abstract.PNG $DEPLOYPATH
+    - /bin/cp conversationalAI.PNG $DEPLOYPATH
+    - /bin/cp defaults.js $DEPLOYPATH
+    - /bin/cp email.png $DEPLOYPATH
+    - /bin/cp favicon.png $DEPLOYPATH
+    - /bin/cp html-parser.js $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp initializer.js $DEPLOYPATH
+    - /bin/cp linkedin.png $DEPLOYPATH
+    - /bin/cp molecular.gif $DEPLOYPATH
+    - /bin/cp molecular.mp4 $DEPLOYPATH
+    - /bin/cp package-lock.json $DEPLOYPATH
+    - /bin/cp package.json $DEPLOYPATH
+    - /bin/cp particles.js $DEPLOYPATH
+    - /bin/cp particles.json $DEPLOYPATH
+    - /bin/cp scatter_200.png $DEPLOYPATH
+    - /bin/cp sp2.jpg $DEPLOYPATH
+    - /bin/cp styleCss.css $DEPLOYPATH
+    - /bin/cp testpart.html $DEPLOYPATH
+    - /bin/cp typed.js $DEPLOYPATH
+    - /bin/cp typed.min.js $DEPLOYPATH
+    - /bin/cp typed.min.js.map $DEPLOYPATH
+    - /bin/cp video.mp4 $DEPLOYPATH
+    - /bin/cp webSample.html $DEPLOYPATH
+    - /bin/cp word2vec.PNG $DEPLOYPATH
