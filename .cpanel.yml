@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/obfuzbhr/nodeApp/
+    - export DEPLOYPATH=/home/obfuzbhr/test/
     - /bin/cp -R node_modules/particles.js $DEPLOYPATH
     - /bin/cp .DS_Store $DEPLOYPATH
     - /bin/cp LSYI0232.jpg $DEPLOYPATH
