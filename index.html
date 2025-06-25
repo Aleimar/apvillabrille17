@@ -596,10 +596,9 @@
 }
 
     /* Skills Section Styles */
-    .skills-section {
-      padding: 50px 20px;
-      background-color: #fff;
-    }
+     .skills-section {
+      background: transparent !important;
+      }
 
     .skills-container {
       max-width: 1200px;
@@ -638,8 +637,9 @@
     }
 
     .skills-content {
-      display: flex;
-      flex-direction: column;
+      /* display: flex;
+      flex-direction: column; */
+      padding: 2vw;
     }
 
     .skill-panel {
@@ -691,301 +691,222 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 50px 20px;
-      background-color: #f9f9f9;
+      padding: 60px 10px 70px 10px;
+      background: none;
+      min-height: 220px;
     }
 
-    .contact-card {
+    .contact-glass-card {
       display: flex;
       flex-direction: column;
-      max-width: 600px;
+      align-items: center;
+      background: rgba(255,255,255,0.18);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.13);
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      border: 1.5px solid rgba(255,255,255,0.22);
+      padding: 2.2rem 2.5rem 1.5rem 2.5rem;
+      min-width: 260px;
+      max-width: 340px;
       width: 100%;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+      position: relative;
+      animation: fadeIn 1.2s cubic-bezier(.4,2,.6,1) 0.1s both;
     }
 
-    .contact-card h2 {
-      margin: 0;
-      padding: 20px;
-      background-color: #3f51b5;
-      color: white;
+    .contact-animated-accent {
+      width: 70px;
+      height: 5px;
+      border-radius: 2.5px;
+      background: linear-gradient(90deg, #45b65e 0%, #3f51b5 100%);
+      margin-bottom: 1.2em;
+      animation: accentBarPulse 2.5s infinite alternate cubic-bezier(.4,2,.6,1);
+      box-shadow: 0 0 12px #45b65e44;
+    }
+
+    .contact-label {
+      font-size: 1.13rem;
+      color: #1D2951;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.3em;
+      text-transform: uppercase;
+      opacity: 0.93;
+      letter-spacing: 0.12em;
       text-align: center;
-      font-size: 24px;
     }
 
-    .contact-links {
+    .contact-icon-row {
       display: flex;
+      flex-direction: row;
+      gap: 1.5em;
       justify-content: center;
-      padding: 20px 0;
-      background: transparent;
-      box-shadow: none;
-      gap: 2.5em;
+      align-items: center;
     }
 
-    .contact-link {
+    .contact-icon-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      background: rgba(255,255,255,0.38);
+      box-shadow: 0 2px 12px #45b65e22, 0 1px 8px #3f51b522;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+      border: 1.5px solid rgba(69,182,94,0.08);
+      position: relative;
+      cursor: pointer;
     }
 
-    .contact-link:hover {
-      transform: translateY(-2px);
+    .contact-icon-btn:hover {
+      background: #e0ffe0;
+      box-shadow: 0 4px 22px #45b65e55, 0 1px 8px #3f51b522;
+      transform: translateY(-3px) scale(1.11);
+      border-color: #45b65e;
     }
 
-    .contact-link img {
-      max-width: 70%;
-      max-height: 70%;
+    .contact-icon-btn img {
+      width: 28px;
+      height: 28px;
+      filter: drop-shadow(0 1px 2px #00356B22);
+      transition: filter 0.2s;
     }
 
-    .contact-footer {
-      padding: 20px;
+    .contact-icon-btn:hover img {
+      filter: drop-shadow(0 2px 6px #45b65e88);
+    }
+
+    @media (max-width: 600px) {
+      .contact-glass-card {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        min-width: 0;
+        max-width: 98vw;
+      }
+      .contact-icon-row {
+        gap: 1em;
+      }
+      .contact-icon-btn {
+        width: 44px;
+        height: 44px;
+      }
+      .contact-icon-btn img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    /* Remove the About card section */
+
+    #particles-js {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 3rem 1rem;
+      background: rgba(29,41,81,0.55);
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 12px #00356B;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #e0ffe0;
+      margin-top: 0.5rem;
+      min-height: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.3rem; }
+      .hero-content { padding: 1.2rem 0.5rem; }
+    }
+
+    /* MODAL IMAGE VIEWER */
+    div#myModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
       text-align: center;
-      background-color: #fff;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
     }
 
-    .contact-footer p {
-      margin: 0;
-      color: #333;
+    .modal-content,
+    #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
     }
 
-    .contact-footer a {
-      color: #3f51b5;
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
       text-decoration: none;
+      cursor: pointer;
     }
 
-    .contact-footer a:hover {
-      text-decoration: underline;
-    }
+    /* End of MODAL IMAGE VIEWER */
 
-    /* End of Contact Section Styles */
-
-    /* Footer for GitHub Pages credit */
-.site-footer {
-  background-color: #1D2951;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-content p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.footer-content a {
-  color: #3f51b5;
-  text-decoration: none;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #3f51b5;
-  color: white;
-  padding: 8px 15px;
-  text-decoration: none;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
-.main-header {
-  position: relative;
-  z-index: 10;
-}
-
-.clean-nav {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  border-bottom: 1px solid #eaeaea;
-}
-
-.clean-nav .nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1.5rem;
-}
-
-.clean-nav .nav-logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #1D2951;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.clean-nav .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.clean-nav .nav-link {
-  color: #1D2951;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.clean-nav .nav-link:hover, .clean-nav .nav-link.active {
-  background: #e0ffe0;
-  color: #45b65e;
-}
-
-.hero-section {
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  background: transparent;
-  overflow: hidden;
-}
-
-#particles-js {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  padding: 3rem 1rem;
-  background: rgba(29,41,81,0.55);
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.hero-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 12px #00356B;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #e0ffe0;
-  margin-top: 0.5rem;
-  min-height: 2.5rem;
-}
-
-@media (max-width: 600px) {
-  .hero-title { font-size: 1.3rem; }
-  .hero-content { padding: 1.2rem 0.5rem; }
-}
-
-/* MODAL IMAGE VIEWER */
-div#myModal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.modal-content,
-#caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0)
-  }
-
-  to {
-    transform: scale(1)
-  }
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* End of MODAL IMAGE VIEWER */
-
-.business-card-hero {
+    .business-card-hero {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1246,20 +1167,183 @@ div#myModal {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.2em;
+        gap: 1.2em; /* Reduced from 2.2em */
+        padding: 2.5em 0 2.7em 0;
       }
-      .contact-accent-bar {
-        width: 70px;
-        height: 4px;
-        border-radius: 2px;
-        background: linear-gradient(90deg, #45b65e 0%, #3f51b5 100%);
-        margin-bottom: 0.2em;
-        animation: accentBarPulse 2.5s infinite alternate cubic-bezier(.4,2,.6,1);
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        background: transparent;
+        box-shadow: none;
+        gap: 1.3em; /* Reduced from 2.5em */
       }
-      @keyframes accentBarPulse {
-        0% { filter: brightness(1) drop-shadow(0 0 0px #45b65e44); }
-        100% { filter: brightness(1.25) drop-shadow(0 0 8px #45b65e88); }
-      }
+
+ .ai-card-modern {
+  max-width: none;   /* REMOVE this line or set to none/100% */
+  width: 100%;       /* Make card take all available width */
+  margin: 0 0 2.5rem 0; /* Remove auto centering */
+}
+
+.ai-card-accent {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #45b65e 0%, #3f51b5 100%);
+  animation: accentBarPulse 2.5s infinite alternate cubic-bezier(.4,2,.6,1);
+}
+.ai-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+  gap: 2.5rem;                  /* wider gap if needed */
+  padding: 2.2rem 2.2rem 1.2rem 2.2rem;
+}
+.ai-card-media {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .ai-card-media img {
+  width: auto;  /* or try 160-180px, adjust for taste */
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #3f51b522;
+}
+.ai-card-media img:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+ .ai-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centers the text */
+  text-align: center;
+}
+.ai-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1D2951;
+  margin: 0 0 0.1em 0;
+  letter-spacing: 0.5px;
+}
+.ai-card-subtitle {
+  font-size: 1.05rem;
+  color: #45b65e;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+.ai-card-stack {
+  display: flex;
+  gap: 0.7em;
+  margin: 0.2em 0 0.5em 0;
+}
+.ai-card-stack img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f1f1f1;
+  box-shadow: 0 1px 4px #3f51b511;
+  padding: 2px;
+}
+.ai-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.ai-card-features li {
+  font-size: 0.98rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.ai-feature-icon {
+  font-size: 1.1em;
+}
+.ai-card-impact {
+  font-size: 0.95rem;
+  color: #3f51b5;
+  margin-top: 0.3em;
+  font-weight: 500;
+}
+@media (max-width: 700px) {
+  .ai-card-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+  }
+  .ai-card-media {
+    justify-content: flex-start;
+  }
+  .ai-card-media img {
+    width: 80px;
+    height: 80px;
+  }
+  .ai-card-modern {
+    max-width: 98vw;
+  }
+}
+
+.bio-card-video {
+  width: auto;
+  height: auto;
+  max-width: auto;
+  max-height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #3f51b522;
+  background: #f9f9f9;
+  transition: transform 0.2s;
+  display: block;
+}
+@media (max-width: 700px) {
+  .bio-card-video {
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+.sentiment-card-img {
+  width: 400px;
+  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #3f51b522;
+  background: #f9f9f9;
+  transition: transform 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 700px) {
+  .sentiment-card-img {
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+.tech-accent-bar {
+  width: 70px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: linear-gradient(90deg, #45b65e 0%, #3f51b5 100%);
+  margin: 0 auto 1.2em auto;
+  animation: accentBarPulse 2.5s infinite alternate cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 0 12px #45b65e44;
+  display: block;
+}
   </style>
 </head>
 
@@ -1299,7 +1383,6 @@ div#myModal {
 
   <section id="skills" class="skills-section">
     <div class="skills-container">
-      <h2>Skills</h2>
       <div class="skills-tabs">
         <button class="skills-tab active" onclick="openSkill('Conversational AI', this)"><span>🤖</span> Conversational AI</button>
         <button class="skills-tab" onclick="openSkill('Bioinformatics', this)"><span>🧬</span> Bioinformatics</button>
@@ -1308,53 +1391,90 @@ div#myModal {
       </div>
       <div class="skills-content">
         <div id="Conversational AI" class="skill-panel" style="display:block">
-          <h3>Conversational AI</h3>
-          <div class="skills-grid">
-            <div class="skill-media">
-              <img class="myImages" src="conversationalAI.PNG" alt="Esta Chatbot">
-            </div>
-            <div class="skill-desc">
-              <p>Developed ESTA, EastWest System Technical Assistant.</p>
-              <p>Esta serves as a digital tool to help customers apply for credit card, check their application status, and submit application requirements. Certain promo codes and referral links could allow Esta for auto loans application, personal loan and other products by consumer lending division. Esta has two main channels, on Facebook Messenger the most popular communication platform used by Filipinos, and a secure webchat which information and documents are uploaded as the company values information and data privacy of their customers.</p>
-              <p>Esta also integrates LUIS (for natural language processing) and CustomVision (for image detection). Esta can respond to greetings and spontaenous follow up questions made possible by LUIS that was setup. The CustomVision feature allows Esta to distinguish valid government ID from not to avoid customers uploading erroneous requirements.</p>
-              <p>Its a continuous learning on how to improve ESTA on providing customers' needs.</p>
+          <div class="ai-card-modern">
+            <div class="ai-card-accent"></div>
+            <div class="ai-card-content">
+              <div class="ai-card-media">
+                <img class="myImages" src="conversationalAI.PNG" alt="ESTA Chatbot Screenshot">
+              </div>
+              <div class="ai-card-info">
+                <h3 class="ai-card-title">ESTA: EastWest System Technical Assistant</h3>
+                <div class="ai-card-subtitle">Conversational AI for Banking & Customer Support</div>
+                <div class="ai-card-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure" title="Azure">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/luis.svg" alt="LUIS" title="LUIS">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/customvision.svg" alt="Custom Vision" title="Custom Vision">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Messenger" title="Messenger">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/webchat.svg" alt="Webchat" title="Webchat">
+                </div>
+                <ul class="ai-card-features">
+                  <li><span class="ai-feature-icon">💬</span> Multi-channel: Messenger & Secure Webchat</li>
+                  <li><span class="ai-feature-icon">🤖</span> NLP with LUIS for natural conversations</li>
+                  <li><span class="ai-feature-icon">🖼️</span> Custom Vision for ID/document validation</li>
+                  <li><span class="ai-feature-icon">🔒</span> Privacy-focused, secure document upload</li>
+                  <li><span class="ai-feature-icon">📈</span> Ongoing improvements & learning</li>
+                </ul>
+                <div class="ai-card-impact">Impact: Helped thousands of customers streamline banking applications and support.</div>
+              </div>
             </div>
           </div>
         </div>
         <div id="Bioinformatics" class="skill-panel" style="display:none">
-          <h3>Bioinformatics</h3>
-          <div class="skills-grid">
-            <div class="skill-media">
-              <video controls>
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="skill-desc">
-              <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
-              <p>Research project focused on Molecular Dynamics Simulation and Modelling of integrins.</p>
-              <p>Supervised by Mr. Albao from the project of Dr. Bascos of Protein Structure and Immunology Laboratory of National Institute of Molecular Biology and Biotechnology.</p>
-              <p>Poster presentation at 2019 International Union of Biochemistry and Molecular Biology and Philippine Society for Biochemistry and Molecular Biology</p>
+          <div class="ai-card-modern">
+            <div class="ai-card-accent"></div>
+            <div class="ai-card-content">
+              <div class="ai-card-media">
+                <video class="bio-card-video" src="video.mp4" alt="Molecular Dynamics Simulation" autoplay loop muted playsinline></video>
+              </div>
+              <div class="ai-card-info">
+                <h3 class="ai-card-title">Molecular Dynamics & Bioinformatics Research</h3>
+                <div class="ai-card-subtitle">Protein Structure Analysis & Simulation</div>
+                <div class="ai-card-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/namd.svg" alt="NAMD" title="NAMD">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vmd.svg" alt="VMD" title="VMD">
+                </div>
+                <ul class="ai-card-features">
+                  <li><span class="ai-feature-icon">🧬</span> Simulated integrin proteins using NAMD</li>
+                  <li><span class="ai-feature-icon">📊</span> Data analysis and visualization in Python & R</li>
+                  <li><span class="ai-feature-icon">🔬</span> Visualized molecular structures with VMD</li>
+                  <li><span class="ai-feature-icon">🤝</span> Collaborated with the <a href="https://pgc.up.edu.ph" target="_blank" rel="noopener" style="color:#3f51b5;font-weight:600;text-decoration:underline;">Philippine Genome Center</a> and <a href="https://nimbb.upd.edu.ph" target="_blank" rel="noopener" style="color:#3f51b5;font-weight:600;text-decoration:underline;">NIMBB</a></li>
+                  <li><span class="ai-feature-icon">🎓</span> Presented at international biochemistry conferences</li>
+                </ul>
+                <div class="ai-card-impact">Impact: Advanced understanding of protein dynamics and contributed to bioinformatics research in the Philippines.</div>
+              </div>
             </div>
           </div>
         </div>
         <div id="Sentiment Analysis" class="skill-panel" style="display:none">
-          <h3>Sentiment Analysis</h3>
-          <div class="skills-grid">
-            <div class="skill-media">
-              <img class="myImages" src="sp2.jpg" alt="Best Special Problem Award">
-            </div>
-            <div class="skill-desc">
-              <h4>Filipino Tweets Sentiment Analysis using Convolutional Neural Network with Distant Supervision</h4>
-              <p><b>ABSTRACT</b></p>
-              <p>Philippines being labelled as the social media capital of the world means that Filipinos spend their time in the internet for recreation and entertainment purposes. Social media is the main avenue of people to share stories and express their sentiments in various topics ranging from politics to media personalities. All these sentiments suggests that there is a huge amount of Filipino sentiment data out there waiting to be converted into valuable information. Current approaches used in natural language processing for Filipino language is the classic machine learning algorithms such as Support Vector Machine and Naïve Bayes which yielded low accuracy or used imbalanced data set for training.</p>
-              <p>In this paper, the researcher explored Convolutional Neural Networks by analyzing sentiments of Filipino Tweets. The network performs binary classification and initially labelled their tweets based on their emoticons. For the architecture to accept tweets, before training, the tweets were converted to vectors using word2vec. The network was trained to 7,741 tweets and tested to 1,936 tweets. The model yielded with accuracy of 74.68% accuracy and was compared to Naïve Bayes that yielded 69.49% by the same dataset. This small margin between the classic machine learning algorithm means that there is a potential in exploring CNN architecture for various natural language processing problems for Filipino languages.</p>
+          <div class="ai-card-modern">
+            <div class="ai-card-accent"></div>
+            <div class="ai-card-content">
+              <div class="ai-card-media">
+                <img class="myImages sentiment-card-img" src="sp2.jpg" alt="Sentiment Analysis Award">
+              </div>
+              <div class="ai-card-info">
+                <h3 class="ai-card-title">Filipino Tweets Sentiment Analysis</h3>
+                <div class="ai-card-subtitle">Deep Learning for Social Media Insights</div>
+                <div class="ai-card-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+                </div>
+                <ul class="ai-card-features">
+                  <li><span class="ai-feature-icon">💡</span> Built a Convolutional Neural Network for sentiment classification</li>
+                  <li><span class="ai-feature-icon">🌐</span> Analyzed thousands of Filipino tweets for public opinion trends</li>
+                  <li><span class="ai-feature-icon">🔎</span> Used word2vec for tweet vectorization and distant supervision for labeling</li>
+                  <li><span class="ai-feature-icon">🏆</span> Awarded Best Special Problem for research impact</li>
+                  <li><span class="ai-feature-icon">📊</span> Achieved 74.7% model accuracy</li>
+                </ul>
+                <div class="ai-card-impact">Impact: Demonstrated the power of deep learning for Filipino language NLP.</div>
+              </div>
             </div>
           </div>
         </div>
         <div id="Technologies" class="skill-panel" style="display:none">
-          <h3>Technologies</h3>
-          <p class="tech-intro">Languages, cloud, AI, and tools I use:</p>
+          <p class="tech-intro">Programming languages, Cloud, Data and AI technologies I used:</p>
+          <div class="ai-card-accent tech-accent-bar"></div>
           <div class="tech-marquee-container-fixed">
             <div class="tech-marquee-fixed marquee-forward">
               <div class="tech-marquee-track-fixed">
@@ -1421,36 +1541,16 @@ div#myModal {
   </section>
 
   <section id="contact" class="contact-section">
-    <div class="contact-card">
-      <div class="contact-links-accent">
-        <div class="contact-accent-bar"></div>
-        <div class="contact-links" style="background: transparent; box-shadow: none; padding: 20px 0; justify-content: center; gap: 2.5em;">
-          <a class="contact-link" href="mailto:apvillabrille@alum.up.edu.ph" title="Email" target="_blank"><img src="email.png" alt="Email"></a>
-          <a class="contact-link" href="https://www.linkedin.com/in/apvillabrille/" title="LinkedIn" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
-          <a class="contact-link" href="https://github.com/aleimar" title="GitHub" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
-        </div>
+    <div class="contact-glass-card">
+      <div class="contact-animated-accent"></div>
+      <div class="contact-label">Get in touch</div>
+      <div class="contact-icon-row">
+        <a class="contact-icon-btn" href="mailto:apvillabrille@alum.up.edu.ph" title="Email" target="_blank"><img src="email.png" alt="Email"></a>
+        <a class="contact-icon-btn" href="https://www.linkedin.com/in/apvillabrille/" title="LinkedIn" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a class="contact-icon-btn" href="https://github.com/aleimar" title="GitHub" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
       </div>
     </div>
   </section>
-
-  <!-- <button class="open-button" onclick="openForm()">Chat</button>
-
-  <div class="chat-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <iframe src="https://powerva.microsoft.com/webchat/bots/6d76ed28-5412-4c82-b4c5-f210178e9514" frameborder="0"
-        style="width: 100%; height: 100%;"></iframe>
-    </form>
-  </div>
-
-  <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-  </script> -->
 
 
 <!-- MODAL IMAGE VIEWER -->
