@@ -464,394 +464,734 @@
 
 
     }
+
+    .about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 420px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  padding: 0;
+  min-height: 160px;
+}
+
+.about-card.wide-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  padding: 0;
+  min-height: 120px;
+}
+
+.about-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 0 0 24px;
+  box-shadow: 0 2px 8px #3f51b522;
+  border: 3px solid #e0ffe0;
+}
+
+.about-content {
+  padding: 18px 24px 18px 24px;
+  flex: 1;
+}
+
+.about-content h2 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  color: #1D2951;
+  font-weight: 700;
+}
+
+.about-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #45b65e;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.about-content p {
+  margin: 0 0 7px;
+  line-height: 1.5;
+  color: #444;
+  font-size: 0.98rem;
+}
+
+.about-contact {
+  margin: 0 0 4px;
+  font-size: 0.97rem;
+}
+
+.about-contact a {
+  color: #1D2951;
+  text-decoration: underline;
+}
+
+.about-location {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .about-card.wide-card { flex-direction: column; align-items: center; max-width: 98vw; }
+  .about-avatar { margin: 18px 0 0 0; }
+  .about-content { padding: 12px 8px 12px 8px; }
+}
+
+    /* Skills Section Styles */
+    .skills-section {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .skills-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .skills-tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    .skills-tab {
+      flex: 1;
+      padding: 15px;
+      margin: 0 10px;
+      background-color: #f1f1f1;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skills-tab span {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .skills-tab.active {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    .skills-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-panel {
+      display: none;
+    }
+
+    .skill-panel.active {
+      display: block;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
+    .skill-media {
+      text-align: center;
+    }
+
+    .skill-media img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .skill-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .skill-desc h4 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .skill-desc p {
+      margin: 0 0 10px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* End of Skills Section Styles */
+
+    /* Contact Section Styles */
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .contact-card h2 {
+      margin: 0;
+      padding: 20px;
+      background-color: #3f51b5;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact-link img {
+      max-width: 70%;
+      max-height: 70%;
+    }
+
+    .contact-footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .contact-footer p {
+      margin: 0;
+      color: #333;
+    }
+
+    .contact-footer a {
+      color: #3f51b5;
+      text-decoration: none;
+    }
+
+    .contact-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* End of Contact Section Styles */
+
+    /* Footer for GitHub Pages credit */
+.site-footer {
+  background-color: #1D2951;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-content a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #3f51b5;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+.main-header {
+  position: relative;
+  z-index: 10;
+}
+
+.clean-nav {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1px solid #eaeaea;
+}
+
+.clean-nav .nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+}
+
+.clean-nav .nav-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1D2951;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.clean-nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.clean-nav .nav-link {
+  color: #1D2951;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.clean-nav .nav-link:hover, .clean-nav .nav-link.active {
+  background: #e0ffe0;
+  color: #45b65e;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 3rem 1rem;
+  background: rgba(29,41,81,0.55);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 12px #00356B;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e0ffe0;
+  margin-top: 0.5rem;
+  min-height: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.3rem; }
+  .hero-content { padding: 1.2rem 0.5rem; }
+}
+
+/* MODAL IMAGE VIEWER */
+div#myModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* End of MODAL IMAGE VIEWER */
+
+.programming-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+.prog-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 7px 10px 0;
+  filter: drop-shadow(0 2px 6px #3f51b533);
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+.prog-icon:hover {
+  transform: scale(1.15) rotate(-5deg);
+  filter: drop-shadow(0 4px 12px #45b65e55);
+}
+.prog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.prog-list li {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.prog-bar {
+  display: inline-block;
+  height: 10px;
+  border-radius: 6px;
+  background: #e0ffe0;
+  margin-left: 8px;
+  min-width: 60px;
+  max-width: 120px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(.4,2,.6,1);
+}
+.prog-bar.python { width: 90px; background: linear-gradient(90deg,#3776ab,#ffd43b); }
+.prog-bar.cpp { width: 80px; background: linear-gradient(90deg,#00599c,#4f7ca1); }
+.prog-bar.java { width: 75px; background: linear-gradient(90deg,#b07219,#f89820); }
+.prog-bar.js { width: 85px; background: linear-gradient(90deg,#f7df1e,#323330); }
+.prog-bar.r { width: 60px; background: linear-gradient(90deg,#276dc3,#fff); }
+.prog-bar.php { width: 60px; background: linear-gradient(90deg,#777bb4,#4f5b93); }
+.prog-bar.sql { width: 70px; background: linear-gradient(90deg,#00758f,#f29111); }
+.prog-bar.nosql { width: 65px; background: linear-gradient(90deg,#13aa52,#b8e994); }
+@media (max-width: 900px) {
+  .programming-grid { flex-direction: column; gap: 1.2rem; }
+  .prog-icon { width: 36px; height: 36px; }
+}
+
+    /* Marquee Styles for Technologies */
+    .tech-marquee-container-fixed {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 60px;
+      margin: 20px 0;
+    }
+
+    .tech-marquee-fixed {
+      display: flex;
+      position: absolute;
+      width: calc(300% + 20px);
+      animation: marquee 15s linear infinite;
+    }
+
+    .tech-marquee-track-fixed {
+      display: flex;
+      padding-left: 100%;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
   </style>
 </head>
 
 <body>
-  <section id="home">
-    <!-- <div class="header"> -->
-    <!-- <div> -->
-    <div id="particles-js">
-      <script type="text/javascript" src="particles.js"></script>
-      <script type="text/javascript" src="app.js"></script>
+    <!-- Accessibility: skip to main content link -->
+<a href="#home" class="skip-link">Skip to main content</a>
+    <header class="main-header">
+  <nav class="navbar sticky-nav clean-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Aleimar</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <div>
-
-      <p>&nbsp</p>
-
+  </nav>
+</header>
+<section id="home" class="hero-section">
+  <div id="particles-js"></div>
+  <div class="business-card-hero">
+    <div class="business-card-glass">
+      <img src="LSYI0232.jpg" alt="Aleimar Villabrille portrait" class="business-card-avatar">
+      <div class="business-card-info">
+        <h1 class="business-card-name">Aleimar P. Villabrille</h1>
+        <h4 class="business-card-title">Chatbot Developer &middot; NLP Enthusiast</h4>
+        <div class="business-card-contact">
+          <a href="mailto:apvillabrille@up.edu.ph" title="Email"><img src="email.png" alt="Email">apvillabrille@up.edu.ph</a>
+        </div>
+        <div class="business-card-location">Davao, Philippines</div>
+        <div class="business-card-socials">
+          <a href="https://www.linkedin.com/in/apvillabrille/" target="_blank" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
+          <a href="https://www.facebook.com/nightshade17/" target="_blank" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+          <a href="https://twitter.com/apvillabrille17" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+          <a href="https://www.instagram.com/ramielaaaaa/" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
     </div>
-
-    <div class="header">
-      <h1>ALEIMAR P. VILLABRILLE</h1>
-
-      <p>
-        <span class="text-slider-items">
-
-        </span>
-        <strong class="text-slider"></strong>
-      </p>
-    </div>
-    <script src="typed.min.js">
-    </script>
-
-    <!-- Add jquery cdn -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-
-    <!-- Add this script for successful 
-        implementation of typed.js  -->
-    <script>
-      if ($(".text-slider").length == 1) {
-
-        var typed_strings =
-          $(".text-slider-items").text();
-
-        var typed = new Typed(".text-slider", {
-          strings: ["I am a Developer", "I am an Analyst", "I am a Researcher"],
-          typeSpeed: 50,
-          loop: true,
-          backDelay: 900,
-          backSpeed: 30,
-        });
-      }
-    </script>
-    <div>
-      
-    </div>
-    <!-- </div> -->
-  </section>
-
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact" class="right">Contact</a>
   </div>
+</section>
 
-  <section id="About">
-
-    <div class="side">
-      <h2>About Me</h2>
-      <div class="row">
-        <div>
-          <img src="https://aleimar.github.io/apvillabrille17/LSYI0232.jpg" alt="Avatar"
-            style="display: block; width:200px; border-radius: 45%">
-        </div>
-        <div class="b1"> </div>
-        <div>
-          <h4><i> Mastering Natural Language Processing </i></h4>
-          <p>I'm currently a chatbot developer in EastWest Banking Corporation. A bot to allow credit card application
-            and provide real-time notifications. </p>
-          <p> An avenue for customer feedback and using NLP to give the best response on their specific concerns or
-            queries. </p>
-          <p> Researching other potential avenues that a chatbot can help to improve both internal and customer-related
-            business operations.</p>
-          <div class="b1">
-            <p> &nbsp</p>
-          </div>
-          <h4><i>Personal Information</i></h4>
-          <div class="row">
-            <table>
-              <tr>
-                <td> <b>Origin</b>: </td>
-                <td>&nbsp
-                <td>
-                <td> Samal, Island Garden City of Samal</td>
-              </tr>
-              <tr>
-                <td> <b>Education</b>: </td>
-                <td>&nbsp
-                <td>
-                <td> BS in Computer Science, University of the Philippines Mindanao</td>
-              </tr>
-              <tr>
-                <td> <b> Nickname</b>: </td>
-                <td>&nbsp
-                <td>
-                <td> <i>Al</i></td>
-              </tr>
-            </table>
-            <!---
-      <div>
-          <p><b> Origin:</b></p>
-          <p><b> Education:</b> </p>
-          <p><b> Nickname:</b></p>
+  <section id="About" class="about-section">
+    <div class="about-card wide-card">
+      <img src="LSYI0232.jpg" alt="Aleimar Villabrille portrait" class="about-avatar">
+      <div class="about-content">
+        <h2>Aleimar P. Villabrille</h2>
+        <h4>Chatbot Developer &middot; NLP Enthusiast</h4>
+        <p>BS Computer Science, University of the Philippines Mindanao</p>
+        <p class="about-contact"><img src="email.png" alt="Email" style="width:18px;vertical-align:middle;margin-right:6px;"> <a href="mailto:apvillabrille@up.edu.ph">apvillabrille@up.edu.ph</a></p>
+        <p class="about-location">Davao, Philippines</p>
       </div>
-      <div class="b1"></div>
-        <div>
-          <p>Samal, Island Garden City of Samal </p>
-          <p>BS in Computer Science, University of the Philippines Mindanao</p>
-          <p>Al</p>
-        </div>
-      -->
-          </div>
-        </div>
-      </div>
+    </div>
   </section>
 
-  <section id="skills">
-    <div class="main">
+  <section id="skills" class="skills-section">
+    <div class="skills-container">
       <h2>Skills</h2>
-      <div class="w3-bar w3-transparent">
-        <button class="w3-bar-item button button1" onclick="openSkill('Conversational AI')">Conversational AI</button>
-        <button class="w3-bar-item button button1" onclick="openSkill('Bioinformatics')">Bioinformatics</button>
-        <button class="w3-bar-item button button1" onclick="openSkill('Sentiment Analysis')">Sentiment Analysis</button>
-        <button class="w3-bar-item button button1" onclick="openSkill('Programming')">Programming</button>
+      <div class="skills-tabs">
+        <button class="skills-tab active" onclick="openSkill('Conversational AI', this)"><span>🤖</span> Conversational AI</button>
+        <button class="skills-tab" onclick="openSkill('Bioinformatics', this)"><span>🧬</span> Bioinformatics</button>
+        <button class="skills-tab" onclick="openSkill('Sentiment Analysis', this)"><span>💬</span> Sentiment Analysis</button>
+        <button class="skills-tab" onclick="openSkill('Technologies', this)"><span>🛠️</span> Technologies</button>
       </div>
-
-      <div id="Conversational AI" class="w3-container skill">
-        <h2>Conversational AI</h2>
-        <div class="grid-container">
-          <div class="item1">
-            <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/conversationalAI.PNG"
-              alt="Esta Chatbot" style="width:100%;max-width:300px">
-          </div>
-
-          <div class="b1">
-            <p> &nbsp</p>
-          </div>
-          <div>
-            <p>Developed ESTA, EastWest System Technical Assistant.</p>
-            <p>Esta serves as a digital tool to help customers apply for credit card, check their application status,
-              and submit application requirements.
-              Certain promo codes and referral links could allow Esta for auto loans application, personal loan and
-              other products by consumer lending division.
-              Esta has two main channels, on Facebook Messenger the most popular communication platform used by
-              Filipinos, and a secure webchat
-              which information and documents are uploaded as the company values information and data privacy of their
-              customers.
-            </p>
-            <p> Esta also integrates LUIS (for natural language processing) and CustomVision (for image detection).
-              Esta can respond to greetings and spontaenous follow up questions made possible by LUIS that was setup.
-              The CustomVision feature allows Esta to distinguish valid government ID from not to avoid customers
-              uploading erroneous requirements.
-            </p>
-            <p> Its a continuous learning on how to improve ESTA on providing customers' needs.</p>
+      <div class="skills-content">
+        <div id="Conversational AI" class="skill-panel" style="display:block">
+          <h3>Conversational AI</h3>
+          <div class="skills-grid">
+            <div class="skill-media">
+              <img class="myImages" src="conversationalAI.PNG" alt="Esta Chatbot">
+            </div>
+            <div class="skill-desc">
+              <p>Developed ESTA, EastWest System Technical Assistant.</p>
+              <p>Esta serves as a digital tool to help customers apply for credit card, check their application status, and submit application requirements. Certain promo codes and referral links could allow Esta for auto loans application, personal loan and other products by consumer lending division. Esta has two main channels, on Facebook Messenger the most popular communication platform used by Filipinos, and a secure webchat which information and documents are uploaded as the company values information and data privacy of their customers.</p>
+              <p>Esta also integrates LUIS (for natural language processing) and CustomVision (for image detection). Esta can respond to greetings and spontaenous follow up questions made possible by LUIS that was setup. The CustomVision feature allows Esta to distinguish valid government ID from not to avoid customers uploading erroneous requirements.</p>
+              <p>Its a continuous learning on how to improve ESTA on providing customers' needs.</p>
+            </div>
           </div>
         </div>
-      </div>
-
-
-      <div id="Bioinformatics" class="w3-container skill" style="display:none">
-        <h2>Bioinformatics</h2>
-        <div class="grid-container">
-          <div class="item1">
-            <video width="100%" max-width="300px" controls>
-              <source src="https://aleimar.github.io/apvillabrille17/video.mp4" type="video/mp4">
+        <div id="Bioinformatics" class="skill-panel" style="display:none">
+          <h3>Bioinformatics</h3>
+          <div class="skills-grid">
+            <div class="skill-media">
+              <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
               </video>
-          </div>
-
-
-          <div>
-            <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
-            <p>Research project focused on Molecular Dynamics Simulation and Modelling of integrins.
-            </p>
-            <p> Supervised by Mr. Albao from the project of Dr. Bascos of Protein Structure and Immunology Laboratory of
-              National Institute of Molecular Biology and Biotechnology.
-            </p>
-            <p> Poster presentation at 2019 International Union of Biochemistry and Molecular Biology and Philippine
-              Society for Biochemistry and Molecular Biology</p>
+            </div>
+            <div class="skill-desc">
+              <p>6-weeks training and internship program for bioinformatics at the Philippine Genome Center</p>
+              <p>Research project focused on Molecular Dynamics Simulation and Modelling of integrins.</p>
+              <p>Supervised by Mr. Albao from the project of Dr. Bascos of Protein Structure and Immunology Laboratory of National Institute of Molecular Biology and Biotechnology.</p>
+              <p>Poster presentation at 2019 International Union of Biochemistry and Molecular Biology and Philippine Society for Biochemistry and Molecular Biology</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div id="Sentiment Analysis" class="w3-container skill" style="display:none">
-        <h2>Sentiment Analysis</h2>
-
-        <div class="grid-container">
-          <div class="item1">
-            <img class="myImages" id="myImg" src="https://aleimar.github.io/apvillabrille17/sp2.jpg"
-              alt="Best Special Problem Award" style="width:100%;max-width:300px">
-          </div>
-
-          <div>
-            <h4>Filipino Tweets Sentiment Analysis using Convolutional Neural Network with Distant Supervision</h4>
-            <p> <b> ABSTRACT </b> </p>
-            <p>
-              Philippines being labelled as the social media capital of the world means that Filipinos spend their time
-              in the internet for recreation and entertainment purposes.
-              Social media is the main avenue of people to share stories and express their sentiments in various topics
-              ranging from politics to media personalities.
-              All these sentiments suggests that there is a huge amount of Filipino sentiment data out there waiting to
-              be converted into valuable information.
-              Current approaches used in natural language processing for Filipino language is the classic machine
-              learning algorithms such as Support Vector Machine and Naïve Bayes which yielded low accuracy or used
-              imbalanced data set for training.
-            </p>
-            <p>
-              In this paper, the researcher explored Convolutional Neural Networks by analyzing sentiments of Filipino
-              Tweets.
-              The network performs binary classification and initially labelled their tweets based on their emoticons.
-              For the architecture to accept tweets, before training, the tweets were converted to vectors using
-              word2vec.
-              The network was trained to 7,741 tweets and tested to 1,936 tweets.
-              The model yielded with accuracy of 74.68% accuracy and was compared to Naïve Bayes that yielded 69.49% by
-              the same dataset.
-              This small margin between the classic machine learning algorithm means that there is a potential in
-              exploring CNN architecture for various natural language processing problems for Filipino languages.
-            </p>
+        <div id="Sentiment Analysis" class="skill-panel" style="display:none">
+          <h3>Sentiment Analysis</h3>
+          <div class="skills-grid">
+            <div class="skill-media">
+              <img class="myImages" src="sp2.jpg" alt="Best Special Problem Award">
+            </div>
+            <div class="skill-desc">
+              <h4>Filipino Tweets Sentiment Analysis using Convolutional Neural Network with Distant Supervision</h4>
+              <p><b>ABSTRACT</b></p>
+              <p>Philippines being labelled as the social media capital of the world means that Filipinos spend their time in the internet for recreation and entertainment purposes. Social media is the main avenue of people to share stories and express their sentiments in various topics ranging from politics to media personalities. All these sentiments suggests that there is a huge amount of Filipino sentiment data out there waiting to be converted into valuable information. Current approaches used in natural language processing for Filipino language is the classic machine learning algorithms such as Support Vector Machine and Naïve Bayes which yielded low accuracy or used imbalanced data set for training.</p>
+              <p>In this paper, the researcher explored Convolutional Neural Networks by analyzing sentiments of Filipino Tweets. The network performs binary classification and initially labelled their tweets based on their emoticons. For the architecture to accept tweets, before training, the tweets were converted to vectors using word2vec. The network was trained to 7,741 tweets and tested to 1,936 tweets. The model yielded with accuracy of 74.68% accuracy and was compared to Naïve Bayes that yielded 69.49% by the same dataset. This small margin between the classic machine learning algorithm means that there is a potential in exploring CNN architecture for various natural language processing problems for Filipino languages.</p>
+            </div>
           </div>
         </div>
+        <div id="Technologies" class="skill-panel" style="display:none">
+          <h3>Technologies</h3>
+          <p class="tech-intro">Languages, cloud, AI, and tools I use:</p>
+          <div class="tech-marquee-container-fixed">
+    <div class="tech-marquee-fixed">
+      <div class="tech-marquee-track-fixed">
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"><span>Python</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"><span>Java</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"><span>JavaScript</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP"><span>PHP</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C/C++"><span>C/C++</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R"><span>R</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="SQL"><span>SQL</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="NoSQL"><span>NoSQL</span></div>
       </div>
-
-      <div id="Programming" class="w3-container skill" style="display:none">
-        <h2>Programming Languages</h2>
-        <div class="grid-container">
-          <div>
-            <h4> Proficient</h4>
-            <p> Python </p>
-            <p> C/C++ </p>
-            <p> Java </p>
-            <p> JavaScript (Node JS) </p>
-          </div>
-          <div>
-            <h4> Familiar </h4>
-            <p> R </p>
-            <p> PHP </p>
-          </div>
-          <div>
-            <h4> Database</h4>
-            <p> SQL </p>
-            <p> NoSQL </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-
-    <!-- MODAL -->
-
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+    <div class="tech-marquee-fixed reverse">
+      <div class="tech-marquee-track-fixed">
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure"><span>Azure</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS"><span>AWS</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks" title="Databricks"><span>Databricks</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI" title="OpenAI"><span>OpenAI</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg" alt="Hugging Face" title="Hugging Face"><span>Hugging Face</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftluis.svg" alt="LUIS" title="LUIS"><span>LUIS</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Custom Vision" title="Custom Vision"><span>Custom Vision</span></div>
+      </div>
     </div>
-
-    <!-- MODAL -->
-
-    <script>
-      // create references to the modal...
-      var modal = document.getElementById('myModal');
-      // to all images -- note I'm using a class!
-      var images = document.getElementsByClassName('myImages');
-      // the image in the modal
-      var modalImg = document.getElementById("img01");
-      // and the caption in the modal
-      var captionText = document.getElementById("caption");
-
-      // Go through all of the images with our custom class
-      for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        // and attach our click listener for this image.
-        img.onclick = function (evt) {
-          console.log(evt);
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-        }
-      }
-
-      var span = document.getElementsByClassName("close")[0];
-
-      span.onclick = function () {
-        modal.style.display = "none";
-      }
-
-    </script>
-
-
-    <script>
-      function openSkill(skill) {
-        var i;
-        var x = document.getElementsByClassName("skill");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        document.getElementById(skill).style.display = "block";
-      }
-    </script>
-
+    <div class="tech-marquee-fixed">
+      <div class="tech-marquee-track-fixed">
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker"><span>Docker</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"><span>Git</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux"><span>Linux</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code"><span>VS Code</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <div class="footer">
-
+  <section id="contact" class="contact-section">
+    <div class="contact-card">
       <h2>Contact Me</h2>
-
-      <div style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
-        <a class="social-link" href="mailto:apvillabrille@up.edu.ph" target="_blank"><i class="icon"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.7 8.8">
-              <title>Email</title>
-              <path
-                d="M.5.8l5.7 3.1c.4.2.9.2 1.4 0L13.3.8c.3-.2.7-.8-.1-.8H.4c-.7 0-.3.6.1.8zm12.9 1.5L7.5 5.4c-.4.2-.9.2-1.4 0L.3 2.3c-.3-.1-.3 0-.3.2v5.6c.1.4.4.7.8.7H13c.4-.1.7-.3.8-.7V2.5c-.1-.1-.1-.3-.4-.2z" />
-            </svg></i></a> <a href="mailto:apvillabrille@up.edu.ph"> Send an Email </a>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:apvillabrille@up.edu.ph" title="Email" target="_blank"><img src="email.png" alt="Email"></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/apvillabrille/" title="LinkedIn" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a class="contact-link" href="https://www.facebook.com/nightshade17/" title="Facebook" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a class="contact-link" href="https://twitter.com/apvillabrille17" title="Twitter" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+        <a class="contact-link" href="https://www.instagram.com/ramielaaaaa/" title="Instagram" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
       </div>
-
-      <div>
-        <a class="social-link" href="https://www.linkedin.com/in/apvillabrille/" target="_blank"><i class="icon"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.7 22.7">
-              <title>LinkedIn</title>
-              <path
-                d="M11.4 0C5.1 0 0 5.1 0 11.4s5.1 11.4 11.4 11.4 11.4-5.1 11.4-11.4S17.6 0 11.4 0zM8.7 16.2l-2.4.1V9h2.4v7.2zm0-8.9c-.2.3-.4.6-.7.7h-.7c-.2 0-.4 0-.6-.1-.3-.2-.5-.5-.6-.9v-.4c0-.2.2-.5.4-.6.2-.2.5-.3.7-.3h.5c.2 0 .5.1.6.3.3 0 .4.3.5.6 0 .2 0 .5-.1.7zm8.6 8.9h-2.4v-3.9-.6c0-.2-.1-.4-.2-.5-.1-.2-.4-.4-.6-.5h-.4c-.2 0-.4.1-.6.2-.2.1-.4.3-.5.6 0 .1-.1.2-.1.3v4.5h-2.4v-1-1.4-1.3-2-1.3-.2c0-.1 0 0 0 0h2.4v1c.1-.2.2-.3.4-.5.3-.3.7-.5 1.1-.6h.9c.3 0 .6.1.9.2.5.2.8.5 1.1.9l.3.9c0 .2.1.5.1.7v4.5c0 2 0 0 0 0z" />
-            </svg></i></a>
-        <a class="social-link" href="https://www.facebook.com/nightshade17/" target="_blank"><i class="icon"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.7 22.7">
-              <title>Facebook</title>
-              <path
-                d="M11.4 0C5.1 0 0 5.1 0 11.4s5.1 11.4 11.4 11.4 11.4-5.1 11.4-11.4S17.6 0 11.4 0zm2.9 7.3h-1.2c-.3 0-.6.1-.9.3-.2.2-.2.5-.2.8v1.5h2.3l-.3 2.3h-2V18H9.6v-5.8h-2V9.9h2V8.2c0-.8.2-1.6.8-2.2.6-.5 1.4-.8 2.1-.8.6 0 1.2 0 1.8.1v2z" />
-            </svg></i></a>
-        <a class="social-link" href="https://twitter.com/apvillabrille17" target="_blank"><i class="icon"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.7 22.7">
-              <title>Twitter</title>
-              <path
-                d="M11.3 0C5 0 0 5.1 0 11.4s5.1 11.3 11.4 11.3c6.3 0 11.3-5.1 11.3-11.4C22.7 5.1 17.6 0 11.3 0zm5.6 9.2v.3c0 4.1-3.3 7.5-7.5 7.5-1.4 0-2.8-.4-4.1-1.2 1.4.2 2.8-.2 3.9-1.1-1.1 0-2.1-.8-2.5-1.8.4.1.8.1 1.2 0-1.2-.2-2.1-1.3-2.1-2.6.4.2.8.3 1.2.3-1.1-.7-1.4-2.3-.7-3.5 1.3 1.6 3.3 2.6 5.4 2.8-.3-1.4.6-2.8 2-3.2.9-.2 1.9.1 2.5.8.6-.1 1.2-.3 1.7-.6-.2.6-.6 1.1-1.2 1.5.5-.1 1-.2 1.5-.4-.3.4-.7.8-1.3 1.2z" />
-            </svg></i></a>
-        <a class="social-link" href="https://www.instagram.com/ramielaaaaa/" target="_blank"><i class="icon"><svg
-              data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.02 34.02">
-              <title>Instagram</title>
-              <path
-                d="M21.66 17a4.65 4.65 0 1 1-9-1.75h-2.5v7a1.63 1.63 0 0 0 1.63 1.63h10.44a1.63 1.63 0 0 0 1.63-1.63v-7h-2.54a4.63 4.63 0 0 1 .34 1.75zM23.55 13.35V10.46h-.38l-2.51.01.01 2.89 2.88-.01z" />
-              <path d="M17 20a3 3 0 1 0-3-3 3 3 0 0 0 3 3z" />
-              <path
-                d="M17 0a17 17 0 1 0 17 17A17 17 0 0 0 17 0zm8.51 15.26v7a3.29 3.29 0 0 1-3.29 3.29H11.79a3.29 3.29 0 0 1-3.29-3.29V11.79a3.29 3.29 0 0 1 3.29-3.29h10.44a3.29 3.29 0 0 1 3.29 3.29z" />
-            </svg></i></a>
-
-
+      <div class="contact-footer">
+        <p>Or just send me an email: <a href="mailto:apvillabrille@up.edu.ph">apvillabrille@up.edu.ph</a></p>
       </div>
-
-
-
-
-      <!---
-    <iframe src='https://webchat.botframework.com/embed/experiment_bot?s=exyUdckj8Rc.TjHge2vnH38F7vSfPSGNnSLtiQKAmO2RKDxt0ia5mJY'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
-  -->
-      <!--  
-  <button class="open-button" onclick="openForm()">Chat</button>
--->
-      <!-- Copy and Paste Me -->
-      <!--  
-<div class="glitch-embed-wrap" id="myForm">
-  <iframe
-    src="https://glitch.com/embed/#!/embed/nightshadebot?path=public/css/embed.css&previewSize=100"
-    title="nightshadebot on Glitch"
-    allow="geolocation; microphone; camera; midi; vr; encrypted-media">
-  </iframe>
-</div>
-
-
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-  
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  </script>
-
-</div>
--->
+    </div>
   </section>
 
   <!-- <button class="open-button" onclick="openForm()">Chat</button>
@@ -873,6 +1213,73 @@
     }
   </script> -->
 
+
+<!-- MODAL IMAGE VIEWER -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+<script>
+// Modern tab switching for skills
+function openSkill(skill, btn) {
+  var panels = document.getElementsByClassName('skill-panel');
+  for (var i = 0; i < panels.length; i++) {
+    panels[i].style.display = 'none';
+  }
+  document.getElementById(skill).style.display = 'block';
+  // Tab active state
+  var tabs = document.getElementsByClassName('skills-tab');
+  for (var j = 0; j < tabs.length; j++) {
+    tabs[j].classList.remove('active');
+  }
+  if (btn) btn.classList.add('active');
+}
+// Modal image viewer (keep existing logic)
+var modal = document.getElementById('myModal');
+var images = document.getElementsByClassName('myImages');
+var modalImg = document.getElementById('img01');
+var captionText = document.getElementById('caption');
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function (evt) {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+var span = document.getElementsByClassName('close')[0];
+span.onclick = function () {
+  modal.style.display = 'none';
+}
+</script>
+
+<!-- Responsive meta and favicon are already present. -->
+<!-- Modernize and clean up script includes for GitHub Pages compatibility -->
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="typed.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  if ($('.text-slider').length === 1) {
+    var typed_strings = $('.text-slider-items').text();
+    var typed = new Typed('.text-slider', {
+      strings: ["I am a Developer", "I am an Analyst", "I am a Researcher"],
+      typeSpeed: 50,
+      loop: true,
+      backDelay: 900,
+      backSpeed: 30,
+    });
+  }
+</script>
+
+<!-- Footer for GitHub Pages credit -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Aleimar P. Villabrille &middot; <a href="https://github.com/aleimar/apvillabrille17" target="_blank">View on GitHub</a></p>
+  </div>
+</footer>
 
 </body>
 
