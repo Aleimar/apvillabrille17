@@ -948,86 +948,6 @@ div#myModal {
 
 /* End of MODAL IMAGE VIEWER */
 
-.programming-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
-  align-items: flex-start;
-}
-.prog-icon {
-  width: 44px;
-  height: 44px;
-  margin: 0 7px 10px 0;
-  filter: drop-shadow(0 2px 6px #3f51b533);
-  transition: transform 0.2s;
-  vertical-align: middle;
-}
-.prog-icon:hover {
-  transform: scale(1.15) rotate(-5deg);
-  filter: drop-shadow(0 4px 12px #45b65e55);
-}
-.prog-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0;
-}
-.prog-list li {
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-}
-.prog-bar {
-  display: inline-block;
-  height: 10px;
-  border-radius: 6px;
-  background: #e0ffe0;
-  margin-left: 8px;
-  min-width: 60px;
-  max-width: 120px;
-  width: 0;
-  transition: width 1.2s cubic-bezier(.4,2,.6,1);
-}
-.prog-bar.python { width: 90px; background: linear-gradient(90deg,#3776ab,#ffd43b); }
-.prog-bar.cpp { width: 80px; background: linear-gradient(90deg,#00599c,#4f7ca1); }
-.prog-bar.java { width: 75px; background: linear-gradient(90deg,#b07219,#f89820); }
-.prog-bar.js { width: 85px; background: linear-gradient(90deg,#f7df1e,#323330); }
-.prog-bar.r { width: 60px; background: linear-gradient(90deg,#276dc3,#fff); }
-.prog-bar.php { width: 60px; background: linear-gradient(90deg,#777bb4,#4f5b93); }
-.prog-bar.sql { width: 70px; background: linear-gradient(90deg,#00758f,#f29111); }
-.prog-bar.nosql { width: 65px; background: linear-gradient(90deg,#13aa52,#b8e994); }
-@media (max-width: 900px) {
-  .programming-grid { flex-direction: column; gap: 1.2rem; }
-  .prog-icon { width: 36px; height: 36px; }
-}
-
-    /* Marquee Styles for Technologies */
-    .tech-marquee-container-fixed {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      height: 60px;
-      margin: 20px 0;
-    }
-
-    .tech-marquee-fixed {
-      display: flex;
-      position: absolute;
-      width: calc(300% + 20px);
-      animation: marquee 15s linear infinite;
-    }
-
-    .tech-marquee-track-fixed {
-      display: flex;
-      padding-left: 100%;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
   </style>
 </head>
 
@@ -1048,24 +968,9 @@ div#myModal {
 </header>
 <section id="home" class="hero-section">
   <div id="particles-js"></div>
-  <div class="business-card-hero">
-    <div class="business-card-glass">
-      <img src="LSYI0232.jpg" alt="Aleimar Villabrille portrait" class="business-card-avatar">
-      <div class="business-card-info">
-        <h1 class="business-card-name">Aleimar P. Villabrille</h1>
-        <h4 class="business-card-title">Chatbot Developer &middot; NLP Enthusiast</h4>
-        <div class="business-card-contact">
-          <a href="mailto:apvillabrille@up.edu.ph" title="Email"><img src="email.png" alt="Email">apvillabrille@up.edu.ph</a>
-        </div>
-        <div class="business-card-location">Davao, Philippines</div>
-        <div class="business-card-socials">
-          <a href="https://www.linkedin.com/in/apvillabrille/" target="_blank" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
-          <a href="https://www.facebook.com/nightshade17/" target="_blank" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-          <a href="https://twitter.com/apvillabrille17" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
-          <a href="https://www.instagram.com/ramielaaaaa/" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-        </div>
-      </div>
-    </div>
+  <div class="hero-content">
+    <h1 class="hero-title">Aleimar P. Villabrille</h1>
+    <p class="hero-subtitle">Chatbot Developer &middot; NLP Enthusiast &middot; Researcher</p>
   </div>
 </section>
 
@@ -1089,7 +994,7 @@ div#myModal {
         <button class="skills-tab active" onclick="openSkill('Conversational AI', this)"><span>🤖</span> Conversational AI</button>
         <button class="skills-tab" onclick="openSkill('Bioinformatics', this)"><span>🧬</span> Bioinformatics</button>
         <button class="skills-tab" onclick="openSkill('Sentiment Analysis', this)"><span>💬</span> Sentiment Analysis</button>
-        <button class="skills-tab" onclick="openSkill('Technologies', this)"><span>🛠️</span> Technologies</button>
+        <button class="skills-tab" onclick="openSkill('Programming', this)"><span>💻</span> Programming</button>
       </div>
       <div class="skills-content">
         <div id="Conversational AI" class="skill-panel" style="display:block">
@@ -1137,43 +1042,40 @@ div#myModal {
             </div>
           </div>
         </div>
-        <div id="Technologies" class="skill-panel" style="display:none">
-          <h3>Technologies</h3>
-          <p class="tech-intro">Languages, cloud, AI, and tools I use:</p>
-          <div class="tech-marquee-container-fixed">
-    <div class="tech-marquee-fixed">
-      <div class="tech-marquee-track-fixed">
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"><span>Python</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"><span>Java</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"><span>JavaScript</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP"><span>PHP</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C/C++"><span>C/C++</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R"><span>R</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="SQL"><span>SQL</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="NoSQL"><span>NoSQL</span></div>
-      </div>
-    </div>
-    <div class="tech-marquee-fixed reverse">
-      <div class="tech-marquee-track-fixed">
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure"><span>Azure</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS"><span>AWS</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks" title="Databricks"><span>Databricks</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI" title="OpenAI"><span>OpenAI</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg" alt="Hugging Face" title="Hugging Face"><span>Hugging Face</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftluis.svg" alt="LUIS" title="LUIS"><span>LUIS</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Custom Vision" title="Custom Vision"><span>Custom Vision</span></div>
-      </div>
-    </div>
-    <div class="tech-marquee-fixed">
-      <div class="tech-marquee-track-fixed">
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker"><span>Docker</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"><span>Git</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux"><span>Linux</span></div>
-        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code"><span>VS Code</span></div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div id="Programming" class="skill-panel" style="display:none">
+          <h3>Programming Languages</h3>
+          <div class="skills-grid programming-grid">
+            <div class="skill-media">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C/C++" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="SQL" class="prog-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="NoSQL" class="prog-icon">
+            </div>
+            <div class="skill-desc">
+              <h4>Proficient</h4>
+              <ul class="prog-list">
+                <li><b>Python</b> <span class="prog-bar python"></span></li>
+                <li><b>C/C++</b> <span class="prog-bar cpp"></span></li>
+                <li><b>Java</b> <span class="prog-bar java"></span></li>
+                <li><b>JavaScript (Node JS)</b> <span class="prog-bar js"></span></li>
+              </ul>
+              <h4>Familiar</h4>
+              <ul class="prog-list">
+                <li>R <span class="prog-bar r"></span></li>
+                <li>PHP <span class="prog-bar php"></span></li>
+              </ul>
+              <h4>Database</h4>
+              <ul class="prog-list">
+                <li>SQL <span class="prog-bar sql"></span></li>
+                <li>NoSQL <span class="prog-bar nosql"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
