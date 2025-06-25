@@ -948,6 +948,205 @@ div#myModal {
 
 /* End of MODAL IMAGE VIEWER */
 
+.business-card-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: rgba(29,41,81,0.45);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.25);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-radius: 1.5rem;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  padding: 2.2rem 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  animation: fadeIn 1.5s cubic-bezier(.4,2,.6,1) 0.2s both;
+}
+
+.business-card-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #3f51b555;
+  border: 3px solid #e0ffe0;
+  background: #fff;
+}
+
+.business-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.business-card-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e0ffe0;
+  margin: 0 0 0.1em 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 12px #00356B;
+}
+
+.business-card-title {
+  font-size: 1.05rem;
+  color: #45b65e;
+  font-weight: 600;
+  margin: 0 0 0.2em 0;
+  letter-spacing: 0.5px;
+}
+
+.business-card-contact {
+  margin: 0.2em 0 0.1em 0;
+  font-size: 0.98rem;
+}
+
+.business-card-contact a {
+  color: #e0ffe0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 500;
+}
+
+.business-card-contact img {
+  width: 18px;
+  vertical-align: middle;
+}
+
+.business-card-location {
+  color: #b8e994;
+  font-size: 0.97rem;
+  margin-bottom: 0.2em;
+}
+
+.business-card-socials {
+  display: flex;
+  gap: 0.7em;
+  margin-top: 0.2em;
+}
+
+.business-card-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 2px 8px #3f51b522;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.business-card-socials a:hover {
+  background: #e0ffe0;
+  transform: scale(1.13) rotate(-4deg);
+}
+
+.business-card-socials img {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 1px 2px #00356B33);
+}
+
+@media (max-width: 600px) {
+  .business-card-hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+    gap: 1rem;
+  }
+  .business-card-avatar {
+    margin-bottom: 0.7em;
+  }
+  .business-card-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Remove the About card section */
+
+.tech-marquee-container-fixed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 54px;
+  margin: 18px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tech-marquee-fixed {
+  display: flex;
+  width: 100vw;
+  min-width: 600px;
+  position: relative;
+  align-items: center;
+}
+.tech-marquee-track-fixed {
+  display: flex;
+  gap: 22px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+.tech-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 4px 12px 4px 8px;
+  box-shadow: 0 2px 8px #3f51b511;
+  font-size: 0.92rem;
+  color: #e0ffe0;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+.tech-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px #00356B22);
+  background: none;
+}
+.tech-item span {
+  display: none;
+}
+.tech-item:hover {
+  background: #e0ffe0;
+  color: #1D2951;
+  transform: scale(1.08) rotate(-2deg);
+}
+.marquee-forward .tech-marquee-track-fixed {
+  animation-name: marquee-forward;
+  animation-duration: 18s;
+}
+.marquee-backward .tech-marquee-track-fixed {
+  animation-name: marquee-backward;
+  animation-duration: 22s;
+}
+@keyframes marquee-forward {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-backward {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+@media (max-width: 700px) {
+  .tech-marquee-container-fixed { height: 120px; }
+  .tech-item img { width: 22px; height: 22px; }
+}
   </style>
 </head>
 
@@ -968,24 +1167,24 @@ div#myModal {
 </header>
 <section id="home" class="hero-section">
   <div id="particles-js"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Aleimar P. Villabrille</h1>
-    <p class="hero-subtitle">Chatbot Developer &middot; NLP Enthusiast &middot; Researcher</p>
-  </div>
-</section>
-
-  <section id="About" class="about-section">
-    <div class="about-card wide-card">
-      <img src="LSYI0232.jpg" alt="Aleimar Villabrille portrait" class="about-avatar">
-      <div class="about-content">
-        <h2>Aleimar P. Villabrille</h2>
-        <h4>Chatbot Developer &middot; NLP Enthusiast</h4>
-        <p>BS Computer Science, University of the Philippines Mindanao</p>
-        <p class="about-contact"><img src="email.png" alt="Email" style="width:18px;vertical-align:middle;margin-right:6px;"> <a href="mailto:apvillabrille@up.edu.ph">apvillabrille@up.edu.ph</a></p>
-        <p class="about-location">Davao, Philippines</p>
+  <div class="hero-content business-card-hero">
+    <img src="LSYI0232.jpg" alt="Aleimar Villabrille portrait" class="business-card-avatar">
+    <div class="business-card-info">
+      <h1 class="business-card-name">Aleimar P. Villabrille</h1>
+      <h4 class="business-card-title">Chatbot Developer &middot; NLP Enthusiast</h4>
+      <div class="business-card-contact">
+        <a href="mailto:apvillabrille@up.edu.ph" title="Email"><img src="email.png" alt="Email">apvillabrille@up.edu.ph</a>
+      </div>
+      <div class="business-card-location">Davao, Philippines</div>
+      <div class="business-card-socials">
+        <a href="https://www.linkedin.com/in/apvillabrille/" target="_blank" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.facebook.com/nightshade17/" target="_blank" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="https://twitter.com/apvillabrille17" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+        <a href="https://www.instagram.com/ramielaaaaa/" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="skills" class="skills-section">
     <div class="skills-container">
@@ -994,7 +1193,7 @@ div#myModal {
         <button class="skills-tab active" onclick="openSkill('Conversational AI', this)"><span>🤖</span> Conversational AI</button>
         <button class="skills-tab" onclick="openSkill('Bioinformatics', this)"><span>🧬</span> Bioinformatics</button>
         <button class="skills-tab" onclick="openSkill('Sentiment Analysis', this)"><span>💬</span> Sentiment Analysis</button>
-        <button class="skills-tab" onclick="openSkill('Programming', this)"><span>💻</span> Programming</button>
+        <button class="skills-tab" onclick="openSkill('Technologies', this)"><span>💻</span> Technologies</button>
       </div>
       <div class="skills-content">
         <div id="Conversational AI" class="skill-panel" style="display:block">
@@ -1042,37 +1241,40 @@ div#myModal {
             </div>
           </div>
         </div>
-        <div id="Programming" class="skill-panel" style="display:none">
-          <h3>Programming Languages</h3>
-          <div class="skills-grid programming-grid">
-            <div class="skill-media">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C/C++" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="SQL" class="prog-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="NoSQL" class="prog-icon">
+        <div id="Technologies" class="skill-panel" style="display:none">
+          <h3>Technologies</h3>
+          <p class="tech-intro">Languages, cloud, AI, and tools I use:</p>
+          <div class="tech-marquee-container-fixed">
+            <div class="tech-marquee-fixed marquee-forward">
+              <div class="tech-marquee-track-fixed">
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"><span>Python</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"><span>Java</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"><span>JavaScript</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP"><span>PHP</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C/C++"><span>C/C++</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R"><span>R</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="SQL"><span>SQL</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="NoSQL"><span>NoSQL</span></div>
+              </div>
             </div>
-            <div class="skill-desc">
-              <h4>Proficient</h4>
-              <ul class="prog-list">
-                <li><b>Python</b> <span class="prog-bar python"></span></li>
-                <li><b>C/C++</b> <span class="prog-bar cpp"></span></li>
-                <li><b>Java</b> <span class="prog-bar java"></span></li>
-                <li><b>JavaScript (Node JS)</b> <span class="prog-bar js"></span></li>
-              </ul>
-              <h4>Familiar</h4>
-              <ul class="prog-list">
-                <li>R <span class="prog-bar r"></span></li>
-                <li>PHP <span class="prog-bar php"></span></li>
-              </ul>
-              <h4>Database</h4>
-              <ul class="prog-list">
-                <li>SQL <span class="prog-bar sql"></span></li>
-                <li>NoSQL <span class="prog-bar nosql"></span></li>
-              </ul>
+            <div class="tech-marquee-fixed marquee-backward">
+              <div class="tech-marquee-track-fixed">
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure"><span>Azure</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS"><span>AWS</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" alt="Databricks" title="Databricks"><span>Databricks</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI" title="OpenAI"><span>OpenAI</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg" alt="Hugging Face" title="Hugging Face"><span>Hugging Face</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftluis.svg" alt="LUIS" title="LUIS"><span>LUIS</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Custom Vision" title="Custom Vision"><span>Custom Vision</span></div>
+              </div>
+            </div>
+            <div class="tech-marquee-fixed marquee-forward">
+              <div class="tech-marquee-track-fixed">
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker"><span>Docker</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"><span>Git</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux"><span>Linux</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code"><span>VS Code</span></div>
+              </div>
             </div>
           </div>
         </div>
